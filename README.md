@@ -4,23 +4,32 @@
 Sophie Shopping App is a simple e-commerce platform built with React Native and TypeScript. It features a smooth shopping flow, allowing users to browse products, add to cart, and complete purchases easily.
 
 ## Features
-- **Feature 1:** 
-Login Screen: Provides basic login functionality users can input their username and password. It fetches data from a mock API for user authentication. Upon successful login, users are redirected to the home or product listing screen. If the credentials are incorrect, an error message is shown.
+- **Login Screen**
+1. Provides basic login functionality users can input their username and password. It fetches data from a mock API for user authentication. Upon successful login, users are redirected to the home. If the credentials are incorrect, an error message is shown.
+3. Demonstrate the use of JWT for token validation and save it in the Keychain. fetch later to use on other API calls.
+4. Afetr succesful login store user data in Realm database and redux store for state management.
+ 
+- **Shop Screen**
+1. Fetches products from a mock API. Displaying product name, images, price of products.
+2. Supports infinite scrolling for easy browsing.
 
-- **Feature 2:** 
-Shop Screen: Fetches products from a mock API. Displaying name, image, price of products. Ssupports infinite scrolling for easy browsing.
+- **Product Details Screen**
+1. Provides detail view of a product with addd to cart
+2. Modify quantities and remove item functionalities.
 
-- **Feature 3:** 
-Product Details Screen: Provides detail view of a product with an option to addd to cart, modify quantities and remove items.
+- **Cart Screen** 
+1. Displays the products list in the cart. Allows users to modify quantities and remove items. Display dynamic total cost value.
+2. A checkout button leads to the chekcout screen.
 
-- **Feature 4:** 
-Cart Screen: Displays the products list in the cart. Allows users to modify quantities and remove items. Daisplay dynamic total cost value. A checkout button leads to the chekcout screen.
+- **Checkout Screen**
+1. Shows an order summary.
+2. Allows users to input shipping details. (input validated)
+3. Select Shipping method and payment method.
+4. Confirms the order with a success message.
 
-- **Feature 5:**
-Checkout Screen: Shows an order summary. Allows users to input shipping details, shipping method and payment method. Confirms the order with a success message.
-
-- **Feature 6:**
-Profile screen: Show profile picture and othe profile related settings. Logout buton functionality.
+- **Profile screen**
+1. Show profile picture and othe profile related settings.
+2. Logout buton functionality.
 
 ## Project Setup Instructions
 
@@ -38,43 +47,47 @@ Before setting up the project, ensure that you have the following installed:
 cd nodeServer
 
 2. Install Dependencies
+```
 npm install
+```
 
-3. Run the node server
+4. Run the node server
+```
 node server.js
+```
 
-4. terminal should display 'Server running on http://localhost:3000'
+6. terminal should display 'Server running on http://localhost:3000'
 
 #### Running the React native app -------------
 1. git clone https://github.com/HimashaGallage/Sophie-mobile-app.git
 
 2. Install Dependencies
-cd Sophie-mobile-app
-npm install
+```cd Sophie-mobile-app```
+```npm install```
 
 3. Install CocoaPods
-cd ios
-pod install
-cd ..
+```cd ios```
+```pod install```
+```cd ..```
 
 4. Start the Metro Bundler: 
 Open your terminal and navigate to the project root, then start the Metro bundler:
-npm start
+```npm start```
 or
-npx react-native start
+```npx react-native start```
 
 5. Run the iOS App: 
 In another terminal window, run the following command to build and launch the app in the iOS simulator:
-npm run ios
+```npm run ios```
 or 
-npx react-native run-ios
+```npx react-native run-ios```
 
 By default, this will run the app on the first available iOS simulator. If you want to specify a particular simulator. you can use the following command:
 
-6. npx react-native run-ios --simulator="iPhone 12"
+6. ```npx react-native run-ios --simulator="iPhone 12"```
 
 7. To run test files
-npm run test
+```npm run test```
 
 
 ### Troubleshooting:
@@ -164,8 +177,12 @@ Here’s a breakdown of the project’s folder structure:
 - Implement component composition for better readability
 
 ### Suggested Improvements
+- Signup page backend integration.
+- Implement Firbase / AWS User authention mechanism.
+- Home screen features
+- Notification manaement with firebase
+- Profile screen implementations
+- Categories tab implementaion
 - Improve UI/UX for better user experience.
-- Implement Firbase / AWS User authention mechanism
 - Implement full backend validation and security measures.
-- Add comprehensive testing (unit, integration, and end-to-end tests).
-- Refactor code for better maintainability and scalability.
+- Implement unit testing for all the features
