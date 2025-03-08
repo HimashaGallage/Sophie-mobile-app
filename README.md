@@ -73,6 +73,9 @@ By default, this will run the app on the first available iOS simulator. If you w
 
 6. npx react-native run-ios --simulator="iPhone 12"
 
+7. To run test files
+npm run test
+
 
 ### Troubleshooting:
 
