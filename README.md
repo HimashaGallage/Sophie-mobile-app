@@ -1,15 +1,3 @@
-# Heading 1
-## Heading 2
-### Heading 3
-#### Heading 4
-##### Heading 5
-###### Heading 6
-
-> Your Quote will be typed here
-[YouTube] (https://www.youtube.com “Youtube”)
-Bold text  **text**
-
-
 # Sophie - shopping app
 
 ## Overview
@@ -44,9 +32,6 @@ Before setting up the project, ensure that you have the following installed:
 - Homebrew and Node.js should be installed on your machine.
 - CocoaPods (to manage dependencies).
 - ios /android emulator setup
-
-### Clone the Repository
-Start by cloning this repository to your local machine:
 
 #### Running the Node.js Backend Server  -------------
 git clone https://github.com/HimashaGallage/nodeServer.git
@@ -97,55 +82,50 @@ If the simulator doesn't launch, try opening Xcode and running the app from ther
 
 ## Folder Structure
 Here’s a breakdown of the project’s folder structure:
-.
-├── App.tsx
-├── Gemfile
-├── Gemfile.lock
-├── README.md
-├── __tests__
-│   └── App.test.tsx
-├── android
-├── app.json
-├── babel.config.js
-├── index.js
-├── ios
-├── jest.config.js
-├── metro.config.js
-├── package-lock.json
-├── package.json
-├── src
-│   ├── assets
-│   │   └── images
-│   ├── components
-│   │   ├── Counter.tsx
-│   │   ├── CustomAlert.tsx
-│   │   ├── CustomButton.tsx
-│   │   ├── CustomLink.tsx
-│   │   └── errorBoundary
-│   ├── config.ts
-│   ├── constants
-│   ├── context
-│   │   └── ThemeContext.tsx
-│   ├── declarations.d.ts
-│   ├── hooks
-│   │   ├── useAppDispatch.ts
-│   │   └── useTheme.ts
-│   ├── navigation
-│   │   ├── AuthStack.tsx
-│   │   ├── BottomTab.tsx
-│   │   ├── CartStack.tsx
-│   │   └── ProductStack.tsx
-│   ├── realm
-│   │   ├── realmConfig.ts
-│   │   └── schemas
-│   ├── redux
-│   ├── screens
-│   ├── services
-│   ├── styles
-│   ├── types
-│   └── utils
-├── tsconfig.json
-└── vendor
+    .
+    ├── android
+    ├── ios
+    ├── src
+    │   ├── assets
+    │   │   └── images
+    │   ├── components
+    │   ├── constants
+    │   ├── context
+    │   ├── hooks
+    │   ├── navigation
+    │   │   ├── AuthStack.tsx
+    │   │   ├── BottomTab.tsx
+    │   │   ├── CartStack.tsx
+    │   │   └── ProductStack.tsx
+    │   ├── realm
+    │   ├── redux
+    │   ├── screens
+    │   │   ├── Auth
+    │   │   ├── Cart
+    │   │   ├── Categories
+    │   │   ├── Home
+    │   │   ├── Products
+    │   │   └── Profile
+    │   ├── services
+    │   ├── styles
+    │   ├── types
+    │   ├── utils
+    │   ├── config.ts
+    │   └── declarations.d.ts
+    ├── vendor
+    ├── App.tsx
+    ├── Gemfile
+    ├── Gemfile.lock
+    ├── READM.md
+    ├── app.json
+    ├── babel.config.js
+    ├── index.js
+    ├── jest.config.js
+    ├── metro.config.js
+    ├── package-lock.json
+    ├── package.json
+    └── tsconfig.json
+
 
 ## Technical implementation
 - TypeScript types and interfaces
