@@ -2,12 +2,12 @@ import React, { useState } from 'react';
 import { View, Text, TextInput, StyleSheet } from 'react-native';
 import { login } from '../../services/authService';
 import { Navigation, LoginCredentials } from '../../types';
-import CustomButton from '../../components/CustomButton';
 import { useTheme } from '../../context/ThemeContext';
-import CustomLink from '../../components/CustomLink';
 import { useDispatch } from 'react-redux';
 import { AppDispatch} from '../../redux/store';
 import { auth_flow } from '../../constants/strings';
+import CustomLink from '../../components/CustomLink';
+import CustomButton from '../../components/CustomButton';
 
 type Props = {
   navigation: Navigation;
@@ -18,17 +18,17 @@ const LoginScreen = ({ navigation, setIsLoggedIn }: Props) => {
   const theme = useTheme();
   const styles = createStyles(theme);
 
+  const dispatch = useDispatch<AppDispatch>();
+
   const [username, setUsername] = useState<string>('');
   const [password, setPassword] = useState<string>('');
-  const [error, setError] = useState<string>(''); // For handling errors
-
-  const dispatch = useDispatch<AppDispatch>();
+  const [error, setError] = useState<string>('');
 
   const handleLogin = async () => {
     try {
       const credentials: LoginCredentials = { username, password };
       // Await the login process
-      const userData = await dispatch(login(credentials)); // Dispatching login async action
+      const userData = await dispatch(login(credentials));
       setIsLoggedIn(true); // If login is successful
     } catch (error) {
       console.log('Login failed', 'Please check your credentials and try again.');

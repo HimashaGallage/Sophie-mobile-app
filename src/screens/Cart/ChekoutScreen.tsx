@@ -1,17 +1,17 @@
 import React, { useState } from 'react';
 import { View, ScrollView, StyleSheet, Pressable, Text } from 'react-native';
-import { useRoute, useNavigation } from '@react-navigation/native';
+import { useRoute } from '@react-navigation/native';
 import { useTheme } from '../../context/ThemeContext';
 import { useDispatch, useSelector } from 'react-redux';
 import { AppDispatch, RootState } from '../../redux/store';
 import { clearCart } from '../../redux/slices/cartSlice';
 import { checkout_screen } from '../../constants/strings';
+import { Navigation } from '../../types';
+import CustomAlert from '../../components/CustomAlert';
 import OrderSummary from './OrderSummary';
 import ShippingDetails from './ShippingDetails';
 import ShippingOptions from './ShippingOptions';
 import PaymentMethod from './PaymentMethod';
-import CustomAlert from '../../components/CustomAlert';
-import { Navigation } from '../../types';
 
 type Props = {
     navigation: Navigation;

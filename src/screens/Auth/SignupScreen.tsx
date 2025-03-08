@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text, TextInput, Button, StyleSheet, Pressable } from 'react-native';
+import { View, Text, TextInput, StyleSheet, Pressable} from 'react-native';
 import { Navigation } from '../../types';
 import CustomButton from '../../components/CustomButton';
 import { useTheme } from '../../context/ThemeContext';

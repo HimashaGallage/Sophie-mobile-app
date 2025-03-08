@@ -19,8 +19,6 @@ const HomeScreen: React.FC = () => {
         </View>
       </View>
 
-      {/* Announcement section */}
-
       {/* Order status section */}
       <View style={styles.orders}>
         <Orders />
