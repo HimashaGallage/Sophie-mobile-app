@@ -33,7 +33,7 @@ Before setting up the project, ensure that you have the following installed:
 - CocoaPods (to manage dependencies).
 - ios /android emulator setup
 
-- #### Running the Node.js Backend Server  -------------
+#### Running the Node.js Backend Server  -------------
 1. git clone https://github.com/HimashaGallage/nodeServer.git
 cd nodeServer
 
