@@ -6,12 +6,12 @@ Sophie Shopping App is a simple e-commerce platform built with React Native and 
 ## Features
 - **Login Screen**
 1. Provides basic login functionality users can input their username and password. It fetches data from a mock API for user authentication. Upon successful login, users are redirected to the home. If the credentials are incorrect, an error message is shown.
-3. Demonstrate the use of JWT for token validation and save it in the Keychain. fetch later to use on other API calls.
-4. Afetr succesful login store user data in Realm database and redux store for state management.
+3. Demonstrate the use of **JWT** for token validation and save it in the **Keychain**. fetch later to use on other API calls.
+4. Afetr succesful login store user data in **Realm database** and **redux toolkit store** for state management.
  
 - **Shop Screen**
 1. Fetches products from a mock API. Displaying product name, images, price of products.
-2. Supports infinite scrolling for easy browsing.
+2. Supports **infinite scrolling** for easy browsing.
 
 - **Product Details Screen**
 1. Provides detail view of a product with addd to cart
@@ -23,7 +23,7 @@ Sophie Shopping App is a simple e-commerce platform built with React Native and 
 
 - **Checkout Screen**
 1. Shows an order summary.
-2. Allows users to input shipping details. (input validated)
+2. Allows users to input shipping details. **input validated**
 3. Select Shipping method and payment method.
 4. Confirms the order with a success message.
 
