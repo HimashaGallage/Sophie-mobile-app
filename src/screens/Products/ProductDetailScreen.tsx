@@ -1,12 +1,12 @@
 import React, { useCallback } from 'react';
-import { View, Text, StyleSheet, Image, ScrollView, Pressable, Alert } from 'react-native';
-import { useDispatch, useSelector } from 'react-redux';
+import { View, Text, StyleSheet, Image, ScrollView } from 'react-native';
 import { useRoute, RouteProp } from '@react-navigation/native';
 import Swiper from 'react-native-swiper';
 import { useTheme } from '../../context/ThemeContext';
-import { product_detail_screen, shop_screen } from '../../constants/strings';
-import { addToCart, removeFromCart, updateQuantity } from '../../redux/slices/cartSlice';
+import { useDispatch, useSelector } from 'react-redux';
 import { AppDispatch, RootState } from '../../redux/store';
+import { addToCart, removeFromCart, updateQuantity } from '../../redux/slices/cartSlice';
+import { product_detail_screen, shop_screen } from '../../constants/strings';
 import { Product } from '../../types';
 import CustomButton from '../../components/CustomButton';
 import Counter from '../../components/Counter';
@@ -20,9 +20,10 @@ const ProductDetailScreen = () => {
     const theme = useTheme();
     const styles = createStyles(theme);
 
-    const route = useRoute<RouteProp<Record<string, ProductDetailRouteParams>, string>>();
     const dispatch = useDispatch<AppDispatch>();
 
+    const route = useRoute<RouteProp<Record<string, ProductDetailRouteParams>, string>>();
+    
     const params = route.params;
     if (!params || !params.product) {
         return (

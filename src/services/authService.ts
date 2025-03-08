@@ -12,6 +12,7 @@ export const login = createAsyncThunk(
   'auth/login',
   async ({ username, password }: LoginCredentials, { rejectWithValue }) => {
     try {
+      //TODO: send inout from UI to API enstead of hardcode data
       const response = await axios.post(API_URL.LOGIN, {
         username: 'user',
         password: 'password',

@@ -6,7 +6,6 @@ import { removeFromCart, updateQuantity, loadCartItems } from '../../redux/slice
 import { Navigation } from '../../types';
 import { useTheme } from '../../context/ThemeContext';
 import { cart_screen } from '../../constants/strings';
-import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import Counter from '../../components/Counter';
 
 type Props = {

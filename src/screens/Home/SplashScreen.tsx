@@ -1,11 +1,11 @@
 import React, { useEffect } from 'react';
 import { View, Text, StyleSheet } from 'react-native';
+import * as Keychain from 'react-native-keychain';
 import { useTheme } from '../../context/ThemeContext';
 import { useDispatch } from 'react-redux';
-import { setUser } from '../../redux/slices/authSlice';
-import * as Keychain from 'react-native-keychain';
-import realm from '../../realm/realmConfig';
 import { AppDispatch } from '../../redux/store';
+import { setUser } from '../../redux/slices/authSlice';
+import realm from '../../realm/realmConfig';
 
 type Props = {
   setIsLoading: (value: boolean) => void;
@@ -14,6 +14,7 @@ type Props = {
 const SplashScreen = ({ setIsLoading }: Props) => {
   const theme = useTheme();
   const styles = createStyles(theme);
+  
   const dispatch = useDispatch<AppDispatch>();
 
   useEffect(() => {

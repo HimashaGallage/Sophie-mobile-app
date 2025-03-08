@@ -4,8 +4,8 @@ import { useSelector, useDispatch } from 'react-redux';
 import { getProducts } from '../../redux/slices/productsSlice';
 import { addToCart } from '../../redux/slices/cartSlice';
 import { RootState, AppDispatch } from '../../redux/store';
-import { Navigation, Product } from '../../types';
 import { useTheme } from '../../context/ThemeContext';
+import { Navigation, Product } from '../../types';
 import ProductCard from './ProductCard';
 
 type Props = {
@@ -17,6 +17,7 @@ const ProductListScreen = ({ navigation }: Props) => {
     const styles = createStyles(theme);
     
     const dispatch = useDispatch<AppDispatch>();
+    
     const { products, loading, error } = useSelector((state: RootState) => state.products);
     const cartItems = useSelector((state: RootState) => state.cart.cartItems);
 
