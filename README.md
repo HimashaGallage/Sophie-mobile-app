@@ -147,6 +147,8 @@ Here’s a breakdown of the project’s folder structure:
 ![cart](https://github.com/user-attachments/assets/2403fa52-bb81-4cd4-bf10-4182d6ac6a49 | width=100)
 ![checkout](https://github.com/user-attachments/assets/03efe234-2095-42e7-b341-6e117d73fbb6 | width=100)
 
+<img src="https://github.com/user-attachments/assets/1fb7bcda-c4c7-40cc-a375-57e3500e3db3" alt="Screenshot" width="300" height="400">
+
 
 
 ## Known Issues and Improvements
