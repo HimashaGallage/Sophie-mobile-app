@@ -33,37 +33,37 @@ Before setting up the project, ensure that you have the following installed:
 - CocoaPods (to manage dependencies).
 - ios /android emulator setup
 
-#### Running the Node.js Backend Server  -------------
-git clone https://github.com/HimashaGallage/nodeServer.git
+- #### Running the Node.js Backend Server  -------------
+1. git clone https://github.com/HimashaGallage/nodeServer.git
 cd nodeServer
 
-Install Dependencies
+2. Install Dependencies
 npm install
 
-Run the node server
+3. Run the node server
 node server.js
 
-terminal should display 'Server running on http://localhost:3000'
+4. terminal should display 'Server running on http://localhost:3000'
 
 #### Running the React native app -------------
-git clone https://github.com/HimashaGallage/Sophie.git
+1. git clone https://github.com/HimashaGallage/Sophie-mobile-app.git
 
-##### Install Dependencies
-cd Sophie
+2. Install Dependencies
+cd Sophie-mobile-app
 npm install
 
-##### Install CocoaPods
+3. Install CocoaPods
 cd ios
 pod install
 cd ..
 
-##### Start the Metro Bundler: 
+4. Start the Metro Bundler: 
 Open your terminal and navigate to the project root, then start the Metro bundler:
 npm start
 or
 npx react-native start
 
-##### Run the iOS App: 
+5. Run the iOS App: 
 In another terminal window, run the following command to build and launch the app in the iOS simulator:
 npm run ios
 or 
@@ -71,7 +71,7 @@ npx react-native run-ios
 
 By default, this will run the app on the first available iOS simulator. If you want to specify a particular simulator. you can use the following command:
 
-npx react-native run-ios --simulator="iPhone 12"
+6. npx react-native run-ios --simulator="iPhone 12"
 
 
 ### Troubleshooting:
