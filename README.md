@@ -97,29 +97,55 @@ If the simulator doesn't launch, try opening Xcode and running the app from ther
 
 ## Folder Structure
 Here’s a breakdown of the project’s folder structure:
-
-/your-project-name
-├── /src/                 # Source code of the application
-│   ├── /assets/          # Resource files such as images, fonts, and other static assets
-│   ├── /components/      # Reusable UI components that can be used across different screens
-│   │    ├── /errorBoundary/  #To handle error fallback mechanism
-│   ├── /constants/       # Constants used throughout the application (strings)
-│   ├── /context/         # Context API files for state management and sharing data across components(theme sharing)
-│   ├── /hooks/           # Custom React hooks for encapsulating reusable logic
-│   ├── /navigation/      # Navigation-related components and configurations (React Navigation Stack, Bottomtab)
-│   ├── /realm/           # Realm database related files ( schemas)
-│   ├── /redux/           # Redux-related files including actions, reducers, and store configuration
-│   ├── /screens/         # Screen components that represent different views in the application
-│   ├── /services/        # API calls and business logic, including service functions for data fetching
-│   ├── /styles/          # Global styles and theme configurations for the application
-│   ├── /types/           # Type definitions ( TypeScript types for components)
-│   └── /utils/           # Helper functions and utility scripts for common tasks
-├── /public/              # Static files (HTML, CSS, images, etc.) served directly to the client
-├── /tests/               # Test files for unit and integration tests
-├── /config/              # Configuration files (e.g., environment variables, database settings)
-├── package.json          # Node.js dependencies and scripts (for Node.js projects)
-├── pom.xml               # Maven configuration file (for Java projects)
-└── README.md             # Documentation file providing an overview of the project, setup instructions, and usage
+.
+├── App.tsx
+├── Gemfile
+├── Gemfile.lock
+├── README.md
+├── __tests__
+│   └── App.test.tsx
+├── android
+├── app.json
+├── babel.config.js
+├── index.js
+├── ios
+├── jest.config.js
+├── metro.config.js
+├── package-lock.json
+├── package.json
+├── src
+│   ├── assets
+│   │   └── images
+│   ├── components
+│   │   ├── Counter.tsx
+│   │   ├── CustomAlert.tsx
+│   │   ├── CustomButton.tsx
+│   │   ├── CustomLink.tsx
+│   │   └── errorBoundary
+│   ├── config.ts
+│   ├── constants
+│   ├── context
+│   │   └── ThemeContext.tsx
+│   ├── declarations.d.ts
+│   ├── hooks
+│   │   ├── useAppDispatch.ts
+│   │   └── useTheme.ts
+│   ├── navigation
+│   │   ├── AuthStack.tsx
+│   │   ├── BottomTab.tsx
+│   │   ├── CartStack.tsx
+│   │   └── ProductStack.tsx
+│   ├── realm
+│   │   ├── realmConfig.ts
+│   │   └── schemas
+│   ├── redux
+│   ├── screens
+│   ├── services
+│   ├── styles
+│   ├── types
+│   └── utils
+├── tsconfig.json
+└── vendor
 
 ## Technical implementation
 - TypeScript types and interfaces
