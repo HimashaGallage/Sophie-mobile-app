@@ -82,49 +82,7 @@ If the simulator doesn't launch, try opening Xcode and running the app from ther
 
 ## Folder Structure
 Here’s a breakdown of the project’s folder structure:
-    .
-    ├── android
-    ├── ios
-    ├── src
-    │   ├── assets
-    │   │   └── images
-    │   ├── components
-    │   ├── constants
-    │   ├── context
-    │   ├── hooks
-    │   ├── navigation
-    │   │   ├── AuthStack.tsx
-    │   │   ├── BottomTab.tsx
-    │   │   ├── CartStack.tsx
-    │   │   └── ProductStack.tsx
-    │   ├── realm
-    │   ├── redux
-    │   ├── screens
-    │   │   ├── Auth
-    │   │   ├── Cart
-    │   │   ├── Categories
-    │   │   ├── Home
-    │   │   ├── Products
-    │   │   └── Profile
-    │   ├── services
-    │   ├── styles
-    │   ├── types
-    │   ├── utils
-    │   ├── config.ts
-    │   └── declarations.d.ts
-    ├── vendor
-    ├── App.tsx
-    ├── Gemfile
-    ├── Gemfile.lock
-    ├── READM.md
-    ├── app.json
-    ├── babel.config.js
-    ├── index.js
-    ├── jest.config.js
-    ├── metro.config.js
-    ├── package-lock.json
-    ├── package.json
-    └── tsconfig.json
+. ├── android ├── ios ├── src │ ├── assets │ │ └── images │ ├── components │ ├── constants │ ├── context │ ├── hooks │ ├── navigation │ │ ├── AuthStack.tsx │ │ ├── BottomTab.tsx │ │ ├── CartStack.tsx │ │ └── ProductStack.tsx │ ├── realm │ ├── redux │ ├── screens │ │ ├── Auth │ │ ├── Cart │ │ ├── Categories │ │ ├── Home │ │ ├── Products │ │ └── Profile │ ├── services │ ├── styles │ ├── types │ ├── utils │ ├── config.ts │ └── declarations.d.ts ├── vendor ├── App.tsx ├── Gemfile ├── Gemfile.lock ├── README.md ├── app.json ├── babel.config.js ├── index.js ├── jest.config.js ├── metro.config.js ├── package-lock.json ├── package.json └── tsconfig.json
 
 
 ## Technical implementation
