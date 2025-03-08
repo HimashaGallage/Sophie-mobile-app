@@ -142,10 +142,10 @@ Here’s a breakdown of the project’s folder structure:
 - Network Error Handling with snack errors
 
 ## Screenshots
-![Login](https://github.com/user-attachments/assets/1fb7bcda-c4c7-40cc-a375-57e3500e3db3 | width=100))
-![product_list](https://github.com/user-attachments/assets/61c8ccb7-a812-4d02-b315-8abd075c2ed6 | width=100))
-![cart](https://github.com/user-attachments/assets/2403fa52-bb81-4cd4-bf10-4182d6ac6a49 | width=100))
-![checkout](https://github.com/user-attachments/assets/03efe234-2095-42e7-b341-6e117d73fbb6 | width=100))
+![Login](https://github.com/user-attachments/assets/1fb7bcda-c4c7-40cc-a375-57e3500e3db3 | width=100)
+![product_list](https://github.com/user-attachments/assets/61c8ccb7-a812-4d02-b315-8abd075c2ed6 | width=100)
+![cart](https://github.com/user-attachments/assets/2403fa52-bb81-4cd4-bf10-4182d6ac6a49 | width=100)
+![checkout](https://github.com/user-attachments/assets/03efe234-2095-42e7-b341-6e117d73fbb6 | width=100)
 
 
 
