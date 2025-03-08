@@ -5,7 +5,7 @@ import AuthStack from './src/navigation/AuthStack';
 import { Provider } from 'react-redux';
 import store from './src/redux/store';
 import { ThemeProvider } from './src/context/ThemeContext';
-import CustomErrorBoundary from './src/components/ErrorBoundary';
+import CustomErrorBoundary from './src/components/errorBoundary/ErrorBoundary';
 
 const App = () => {
   return (
