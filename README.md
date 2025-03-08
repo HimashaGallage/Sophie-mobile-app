@@ -141,6 +141,14 @@ Here’s a breakdown of the project’s folder structure:
 - Error Boundaries to catch and handle UI errors gracefully.
 - Network Error Handling with snack errors
 
+## Screenshots
+![Login](https://github.com/user-attachments/assets/1fb7bcda-c4c7-40cc-a375-57e3500e3db3)
+![product_list](https://github.com/user-attachments/assets/61c8ccb7-a812-4d02-b315-8abd075c2ed6)
+![cart](https://github.com/user-attachments/assets/2403fa52-bb81-4cd4-bf10-4182d6ac6a49)
+![checkout](https://github.com/user-attachments/assets/03efe234-2095-42e7-b341-6e117d73fbb6)
+
+
+
 ## Known Issues and Improvements
 
 ### Known Issues
