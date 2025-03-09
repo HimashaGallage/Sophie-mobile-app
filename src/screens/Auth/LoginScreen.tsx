@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { View, Text, TextInput, StyleSheet } from 'react-native';
-import { login } from '../../services/authService';
+import authThunk from '../../redux/thunks/authThunk';
 import { Navigation, LoginCredentials } from '../../types';
 import { useTheme } from '../../context/ThemeContext';
 import { useDispatch } from 'react-redux';
-import { AppDispatch} from '../../redux/store';
+import { AppDispatch } from '../../redux/store';
 import { auth_flow } from '../../constants/strings';
 import CustomLink from '../../components/CustomLink';
 import CustomButton from '../../components/CustomButton';
@@ -28,7 +28,7 @@ const LoginScreen = ({ navigation, setIsLoggedIn }: Props) => {
     try {
       const credentials: LoginCredentials = { username, password };
       // Await the login process
-      const userData = await dispatch(login(credentials));
+      const userData = await dispatch(authThunk.login(credentials));
       setIsLoggedIn(true); // If login is successful
     } catch (error) {
       console.log('Login failed', 'Please check your credentials and try again.');
@@ -104,7 +104,7 @@ const createStyles = (theme: any) => StyleSheet.create({
     alignItems: 'center',
     width: '100%',
     height: 50,
-    backgroundColor:theme.Colors.input_grey,
+    backgroundColor: theme.Colors.input_grey,
     borderRadius: 16,
     paddingHorizontal: 10,
     marginBottom: 20,
