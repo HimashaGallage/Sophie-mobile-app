@@ -5,7 +5,7 @@ import Swiper from 'react-native-swiper';
 import { useTheme } from '../../context/ThemeContext';
 import { useDispatch, useSelector } from 'react-redux';
 import { AppDispatch, RootState } from '../../redux/store';
-import { addToCart, removeFromCart, updateQuantity } from '../../redux/slices/cartSlice';
+import cartThunk from '../../redux/thunks/cartThunk';
 import { product_detail_screen, shop_screen } from '../../constants/strings';
 import { Product } from '../../types';
 import CustomButton from '../../components/CustomButton';
@@ -42,21 +42,21 @@ const ProductDetailScreen = () => {
     const quantity = cartItem ? cartItem.quantity : 0;
 
     const handleAddToCart = useCallback(() => {
-        dispatch(addToCart({ id: product.id, title: product.title, price: product.price, quantity: 1, image: product.images[0] }));
+        dispatch(cartThunk.addToCart({ id: product.id, title: product.title, price: product.price, quantity: 1, image: product.images[0] }));
     }, [dispatch, product, quantity]);
 
     const handleIncreaseQuantity = useCallback(() => {
         if (product?.id) {
-            dispatch(updateQuantity({ id: product.id, quantity: quantity + 1 }));
+            dispatch(cartThunk.updateQuantity({ id: product.id, quantity: quantity + 1 }));
         }
     }, [dispatch, product?.id, quantity]);
 
     const handleDecreaseQuantity = useCallback(() => {
         if (product?.id) {
             if (quantity > 1) {
-                dispatch(updateQuantity({ id: product.id, quantity: quantity - 1 }));
+                dispatch(cartThunk.updateQuantity({ id: product.id, quantity: quantity - 1 }));
             } else {
-                dispatch(removeFromCart(product.id));
+                dispatch(cartThunk.removeFromCart(product.id));
             }
         }
     }, [dispatch, product?.id, quantity]);

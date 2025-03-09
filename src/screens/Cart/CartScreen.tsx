@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { View, Text, FlatList, Pressable, Image, StyleSheet } from 'react-native';
 import { useSelector, useDispatch } from 'react-redux';
 import { RootState, AppDispatch } from '../../redux/store';
-import { removeFromCart, updateQuantity, loadCartItems } from '../../redux/slices/cartSlice';
+import cartThunk from '../../redux/thunks/cartThunk';
 import { Navigation } from '../../types';
 import { useTheme } from '../../context/ThemeContext';
 import { cart_screen } from '../../constants/strings';
@@ -24,7 +24,7 @@ const CartScreen = ({ navigation }: Props) => {
 
     useEffect(() => {
         if (userId) {
-            dispatch(loadCartItems());
+            dispatch(cartThunk.loadCartItems());
         }
     }, [dispatch, userId]);
 
@@ -35,21 +35,21 @@ const CartScreen = ({ navigation }: Props) => {
 
     const handleRemoveFromCart = (id: number) => {
         if (userId) {
-            dispatch(removeFromCart(id));
+            dispatch(cartThunk.removeFromCart(id));
         }
     };
 
     const handleIncreaseQuantity = (id: number) => {
         const existingItem = cartItems.find(item => item.id === id);
         if (existingItem) {
-            dispatch(updateQuantity({ id, quantity: existingItem.quantity + 1 }));
+            dispatch(cartThunk.updateQuantity({ id, quantity: existingItem.quantity + 1 }));
         }
     };
 
     const handleDecreaseQuantity = (id: number) => {
         const existingItem = cartItems.find(item => item.id === id);
         if (existingItem && existingItem.quantity > 1) {
-            dispatch(updateQuantity({ id, quantity: existingItem.quantity - 1 }));
+            dispatch(cartThunk.updateQuantity({ id, quantity: existingItem.quantity - 1 }));
         } else {
             handleRemoveFromCart(id);
         }
@@ -66,9 +66,11 @@ const CartScreen = ({ navigation }: Props) => {
                 <Text style={styles.productTitle}>{item.title}</Text>
                 <Text style={styles.productPrice}>${item.price.toFixed(2)}</Text>
             </View>
-            <Counter quantity={item.quantity} 
-                    increaseQuantity={()=>handleIncreaseQuantity(item.id)} 
-                    decreaseQuantity={()=> handleDecreaseQuantity(item.id)}/>
+            <Counter 
+                quantity={item.quantity} 
+                increaseQuantity={() => handleIncreaseQuantity(item.id)} 
+                decreaseQuantity={() => handleDecreaseQuantity(item.id)} 
+            />
         </View>
     );
 
@@ -144,18 +146,6 @@ const createStyles = (theme: any) => StyleSheet.create({
     productPrice: {
         fontWeight: 'bold',
         color: theme.Colors.primary,
-    },
-    quantityControl: {
-        flexDirection: 'row',
-        alignItems: 'center',
-    },
-    quantity: {
-        borderWidth: 1,
-        borderColor: '#D1D5DB',
-        paddingHorizontal: 8,
-        paddingVertical: 4,
-        borderRadius: 4,
-        marginHorizontal: 8,
     },
     totalContainer: {
         flexDirection: 'row',

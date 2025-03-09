@@ -2,7 +2,7 @@ import React, { useEffect, useState, useCallback, useMemo } from 'react';
 import { View, Text, FlatList, ActivityIndicator, StyleSheet } from 'react-native';
 import { useSelector, useDispatch } from 'react-redux';
 import { getProducts } from '../../redux/slices/productsSlice';
-import { addToCart } from '../../redux/slices/cartSlice';
+import cartThunk from '../../redux/thunks/cartThunk';
 import { RootState, AppDispatch } from '../../redux/store';
 import { useTheme } from '../../context/ThemeContext';
 import { Navigation, Product } from '../../types';
@@ -44,7 +44,7 @@ const ProductListScreen = ({ navigation }: Props) => {
     }, [dispatch, isFetchingMore, loading, page]);
 
     const handleAddToCart = useCallback((product: Product) => {
-        dispatch(addToCart({ id: product.id, title: product.title, price: product.price, quantity: 1, image: product.images[0] }));
+        dispatch(cartThunk.addToCart({ id: product.id, title: product.title, price: product.price, quantity: 1, image: product.images[0] }));
     }, [dispatch]);
 
     const getProductQuantity = useMemo(() => {
