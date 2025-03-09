@@ -7,8 +7,8 @@ import { LoginCredentials } from '../types';
 export const loginUser = async ({ username, password }: LoginCredentials) => {
   try {
     const response = await axios.post(API_URL.LOGIN, {
-      username,
-      password,
+      username: 'user',
+      password: 'password',
     });
 
     const userData = response.data;

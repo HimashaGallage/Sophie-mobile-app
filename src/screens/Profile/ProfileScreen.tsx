@@ -3,7 +3,7 @@ import { View, Text, Button, StyleSheet, Image, FlatList, Pressable, Alert } fro
 import { useDispatch } from 'react-redux';
 import { useTheme } from '../../context/ThemeContext';
 import { AppDispatch } from '../../redux/store';
-import { logout } from '../../services/authService';
+import authThunk from '../../redux/thunks/authThunk';
 import { resetProductsState } from '../../redux/slices/productsSlice';
 import profilePicture from '../../assets/images/portrait.jpg';
 
@@ -32,7 +32,7 @@ const ProfileScreen: React.FC = () => {
 
   const onPressLogout = () => {
     dispatch(resetProductsState());
-    dispatch(logout());
+    dispatch(authThunk.logout());
   };
 
   const onPressUpdateProfile = () => {
