@@ -4,7 +4,7 @@ import { useRoute } from '@react-navigation/native';
 import { useTheme } from '../../context/ThemeContext';
 import { useDispatch, useSelector } from 'react-redux';
 import { AppDispatch, RootState } from '../../redux/store';
-import { clearCart } from '../../redux/slices/cartSlice';
+import cartThunk from '../../redux/thunks/cartThunk';
 import { checkout_screen } from '../../constants/strings';
 import { Navigation } from '../../types';
 import CustomAlert from '../../components/CustomAlert';
@@ -13,7 +13,7 @@ import ShippingDetails from './ShippingDetails';
 import ShippingOptions from './ShippingOptions';
 import PaymentMethod from './PaymentMethod';
 
-type Props = {
+interface Props {
     navigation: Navigation;
 };
 
@@ -91,7 +91,7 @@ const CheckoutScreen = ({ navigation }: Props) => {
         }
 
         if (userId) {
-            dispatch(clearCart(userId));
+            dispatch(cartThunk.clearCart(userId));
             setShowAlert(true);
             return;
         }
