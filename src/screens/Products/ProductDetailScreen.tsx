@@ -2,14 +2,14 @@ import React, { useCallback } from 'react';
 import { View, Text, StyleSheet, Image, ScrollView } from 'react-native';
 import { useRoute, RouteProp } from '@react-navigation/native';
 import Swiper from 'react-native-swiper';
-import { useTheme } from '../../context/ThemeContext';
 import { useDispatch, useSelector } from 'react-redux';
 import { AppDispatch, RootState } from '../../redux/store';
 import cartThunk from '../../redux/thunks/cartThunk';
-import { product_detail_screen, shop_screen } from '../../constants/strings';
 import { Product } from '../../types';
+import { useTheme } from '../../context/ThemeContext';
 import CustomButton from '../../components/CustomButton';
 import Counter from '../../components/Counter';
+import { product_detail_screen, shop_screen } from '../../constants/strings';
 
 type ProductDetailRouteParams = {
     product: Product;

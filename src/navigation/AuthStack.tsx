@@ -1,12 +1,12 @@
-import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import LoginScreen from "../screens/Auth/LoginScreen";
-import BottomTab from "./BottomTab";
-import SignupScreen from "../screens/Auth/SignupScreen";
-import { NavigationContainer } from "@react-navigation/native";
 import { useEffect, useState } from "react";
-import SplashScreen from "../screens/Home/SplashScreen";
+import { NavigationContainer } from "@react-navigation/native";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { RootState } from "../redux/store";
 import { useSelector } from "react-redux";
+import BottomTab from "./BottomTab";
+import SplashScreen from "../screens/Home/SplashScreen";
+import LoginScreen from "../screens/Auth/LoginScreen";
+import SignupScreen from "../screens/Auth/SignupScreen";
 
 const Stack = createNativeStackNavigator();
 

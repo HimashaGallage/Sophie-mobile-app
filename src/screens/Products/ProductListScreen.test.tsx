@@ -1,10 +1,10 @@
 import React from 'react';
 import { render, fireEvent, waitFor } from '@testing-library/react-native';
 import { Provider } from 'react-redux';
-import  store from '../../redux/store';  // import your actual store here
-import ProductListScreen from './ProductListScreen';
+import  store from '../../redux/store';
 import { getProducts } from '../../redux/slices/productsSlice';
-import { addToCart } from '../../redux/slices/cartSlice';
+import cartThunk from '../../redux/thunks/cartThunk';
+import ProductListScreen from './ProductListScreen';
 
 // Mocking navigation prop
 const mockNavigation = { navigate: jest.fn() };
@@ -109,7 +109,7 @@ describe('ProductListScreen', () => {
 
     fireEvent.press(getByText('Add to Cart'));
     expect(mockDispatch).toHaveBeenCalledWith(
-      addToCart({
+      cartThunk.addToCart({
         id: mockProducts[0].id,
         title: mockProducts[0].title,
         price: mockProducts[0].price,

@@ -1,15 +1,14 @@
 import React from 'react';
+import { StyleSheet, View } from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import HomeScreen from '../screens/Home/HomeScreen';
-import ProfileScreen from '../screens/Profile/ProfileScreen';
+import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+import { useTheme } from '../context/ThemeContext';
 import CartStack from './CartStack';
 import ProductStack from './ProductStack';
-import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
-import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
-import { useTheme } from '../context/ThemeContext';
-import CategoriesScreen from '../screens/Categories/CategoriesScreen';
+import HomeScreen from '../screens/Home/HomeScreen';
+import ProfileScreen from '../screens/Profile/ProfileScreen';
 import { bottom_tabs } from '../constants/strings';
-import { StyleSheet, View } from 'react-native';
 
 const Tab = createBottomTabNavigator();
 

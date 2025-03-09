@@ -2,9 +2,9 @@ import React from 'react';
 import { View, Text, StyleSheet, Image, ScrollView } from 'react-native';
 import { useTheme } from '../../context/ThemeContext';
 import profilePicture from '../../assets/images/portrait.jpg';
-import { home_screen } from '../../constants/strings';
 import Stories from './Stories';
 import Orders from './Orders';
+import { home_screen } from '../../constants/strings';
 
 const HomeScreen: React.FC = () => {
   const theme = useTheme();
