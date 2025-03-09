@@ -1,9 +1,9 @@
 import React, { useEffect, useState, useCallback, useMemo } from 'react';
 import { View, Text, FlatList, ActivityIndicator, StyleSheet } from 'react-native';
 import { useSelector, useDispatch } from 'react-redux';
-import { getProducts } from '../../redux/slices/productsSlice';
-import cartThunk from '../../redux/thunks/cartThunk';
 import { RootState, AppDispatch } from '../../redux/store';
+import cartThunk from '../../redux/thunks/cartThunk';
+import { getProducts } from '../../redux/slices/productsSlice';
 import { useTheme } from '../../context/ThemeContext';
 import { Navigation, Product } from '../../types';
 import ProductCard from './ProductCard';

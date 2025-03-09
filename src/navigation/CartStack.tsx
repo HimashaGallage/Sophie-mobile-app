@@ -1,8 +1,8 @@
 import React from 'react';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { useTheme } from '../context/ThemeContext';
 import CartScreen from '../screens/Cart/CartScreen';
 import CheckoutScreen from '../screens/Cart/ChekoutScreen';
-import { useTheme } from '../context/ThemeContext';
 
 const Stack = createNativeStackNavigator();
 

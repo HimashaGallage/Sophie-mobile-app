@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import { View, Text, TextInput, StyleSheet } from 'react-native';
+import { useDispatch } from 'react-redux';
+import { AppDispatch } from '../../redux/store';
 import authThunk from '../../redux/thunks/authThunk';
 import { Navigation, LoginCredentials } from '../../types';
 import { useTheme } from '../../context/ThemeContext';
-import { useDispatch } from 'react-redux';
-import { AppDispatch } from '../../redux/store';
-import { auth_flow } from '../../constants/strings';
 import CustomLink from '../../components/CustomLink';
 import CustomButton from '../../components/CustomButton';
+import { auth_flow } from '../../constants/strings';
 
 type Props = {
   navigation: Navigation;

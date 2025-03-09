@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { View, Text, TextInput, StyleSheet, Pressable} from 'react-native';
 import { Navigation } from '../../types';
-import CustomButton from '../../components/CustomButton';
 import { useTheme } from '../../context/ThemeContext';
+import CustomButton from '../../components/CustomButton';
 
 type Props = {
   navigation: Navigation;
