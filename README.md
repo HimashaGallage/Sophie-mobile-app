@@ -148,13 +148,24 @@ Here’s a breakdown of the project’s folder structure:
 ```
 
 ## Technical implementation
-- TypeScript types and interfaces
-- Context API for theme sharing.
-- Redux Toolkit for state management
-- React Navigation Stack Navigation and Bottom Tab Navigation
-- Axios retrieve product data from a mock API server.
-- Error Boundaries to catch and handle UI errors gracefully.
-- Network Error Handling with snack errors
+- Technologies Used
+- TypeScript
+- React
+- React Native
+- React Query
+- Redux Toolkit
+- React Navigation
+- Axios
+- Context API
+- Error Boundaries
+- JWT (JSON Web Tokens)
+- Keychain (for secure storage)
+- Realm Database
+- Snack Errors (or Toast Notifications)
+- Infinite Scrolling
+- useInfiniteQuery
+- useMemo
+- FlatList
 
 ## Screenshots
 
