@@ -61,35 +61,55 @@ node server.js
 6. terminal should display 'Server running on http://localhost:3000'
 
 #### Running the React native app -------------
-1. git clone https://github.com/HimashaGallage/Sophie-mobile-app.git
+1.
+```
+git clone https://github.com/HimashaGallage/Sophie-mobile-app.git
+```
 
-2. Install Dependencies
-```cd Sophie-mobile-app```
-```npm install```
+3. Install Dependencies
+```
+cd Sophie-mobile-app
+npm install
+```
 
-3. Install CocoaPods
-```cd ios```
-```pod install```
-```cd ..```
+4. Install CocoaPods
+```
+cd ios
+pod install
+cd ..
+```
 
-4. Start the Metro Bundler: 
+6. Start the Metro Bundler: 
 Open your terminal and navigate to the project root, then start the Metro bundler:
-```npm start```
+```
+npm start
+```
 or
-```npx react-native start```
+```
+npx react-native start
+```
 
-5. Run the iOS App: 
+8. Run the iOS App: 
 In another terminal window, run the following command to build and launch the app in the iOS simulator:
-```npm run ios```
+```
+npm run ios
+```
 or 
-```npx react-native run-ios```
+```
+npx react-native run-ios
+```
 
 By default, this will run the app on the first available iOS simulator. If you want to specify a particular simulator. you can use the following command:
 
-6. ```npx react-native run-ios --simulator="iPhone 12"```
+6.
+```
+npx react-native run-ios --simulator="iPhone 12"
+```
 
-7. To run test files
-```npm run test```
+8. To run test files
+```
+npm run test
+```
 
 
 ### Troubleshooting:
