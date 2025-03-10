@@ -6,17 +6,22 @@ import { Provider } from 'react-redux';
 import store from './src/redux/store';
 import { ThemeProvider } from './src/context/ThemeContext';
 import CustomErrorBoundary from './src/components/errorBoundary/ErrorBoundary';
+import { QueryClient, QueryClientProvider } from 'react-query';
+
+const queryClient = new QueryClient();
 
 const App = () => {
   return (
     <ThemeProvider>
       <Provider store={store}>
-        <CustomErrorBoundary>
-          <View style={styles.container}>
-            <AuthStack />
-            <Toast /> 
-          </View>
-        </CustomErrorBoundary>
+        <QueryClientProvider client={queryClient}>
+          <CustomErrorBoundary>
+            <View style={styles.container}>
+              <AuthStack />
+              <Toast /> 
+            </View>
+          </CustomErrorBoundary>
+        </QueryClientProvider>
       </Provider>
     </ThemeProvider>
   );

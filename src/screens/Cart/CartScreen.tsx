@@ -66,10 +66,10 @@ const CartScreen = ({ navigation }: Props) => {
                 <Text style={styles.productTitle}>{item.title}</Text>
                 <Text style={styles.productPrice}>${item.price.toFixed(2)}</Text>
             </View>
-            <Counter 
-                quantity={item.quantity} 
-                increaseQuantity={() => handleIncreaseQuantity(item.id)} 
-                decreaseQuantity={() => handleDecreaseQuantity(item.id)} 
+            <Counter
+                quantity={item.quantity}
+                increaseQuantity={() => handleIncreaseQuantity(item.id)}
+                decreaseQuantity={() => handleDecreaseQuantity(item.id)}
             />
         </View>
     );
@@ -162,14 +162,19 @@ const createStyles = (theme: any) => StyleSheet.create({
     },
     checkoutButton: {
         backgroundColor: theme.Colors.secondary,
-        paddingHorizontal: 16,
         paddingVertical: 8,
-        borderRadius: 8,
+        paddingHorizontal: 24,
+        borderRadius: 30,
+        justifyContent: 'center',
+        alignItems: 'center',
+        height: 40,
+        width: 'auto',
     },
     checkoutButtonText: {
         color: theme.Colors.white,
         fontWeight: 'bold',
-    },
+        fontSize: 16,
+    }
 });
 
 export default CartScreen;

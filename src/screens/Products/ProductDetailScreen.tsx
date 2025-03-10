@@ -23,7 +23,7 @@ const ProductDetailScreen = () => {
     const dispatch = useDispatch<AppDispatch>();
 
     const route = useRoute<RouteProp<Record<string, ProductDetailRouteParams>, string>>();
-    
+
     const params = route.params;
     if (!params || !params.product) {
         return (

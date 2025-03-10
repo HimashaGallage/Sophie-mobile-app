@@ -2,7 +2,6 @@ import React from 'react';
 import { render, fireEvent, waitFor } from '@testing-library/react-native';
 import { Provider } from 'react-redux';
 import  store from '../../redux/store';
-import { getProducts } from '../../redux/slices/productsSlice';
 import cartThunk from '../../redux/thunks/cartThunk';
 import ProductListScreen from './ProductListScreen';
 
