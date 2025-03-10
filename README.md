@@ -12,10 +12,10 @@ Sophie Shopping App is a simple e-commerce platform built with React Native and 
 - **Shop Screen**
 1. Fetches products from a mock API.
 2. Use **React query** to fecth and cache data. Displaying product name, images, price of products.
-3. Use **useInfiniteQuery** **useMemo** for easy browsing.
+3. Use **useInfiniteQuery** , **useMemo** for easy browsing.
 
 - **Product Details Screen**
-1. Provides detail view of a product with addd to cart.
+1. Provides detail view of a product with add to cart.
 2. Use **redux toolkit store** , **React thunk** , **Realm database** to store cart data temporary and local storeage for laetr use (after logout and login, close app an open)
 3. Modify quantities and remove item functionalities.
 
@@ -171,14 +171,13 @@ Here’s a breakdown of the project’s folder structure:
 - TypeScript
 - React
 - React Native
+- React Navigation
 - React Query, useInfiniteQuery
-- React Navigation
 - Redux Toolkit
-- React Navigation
-- Axios
 - Context API (share theme across app)
+- Axios
 - JWT (JSON Web Tokens)
-- Keychain (for secure storage)
+- Keychain (for secure token storage)
 - Realm Database
 - Snack Errors (or Toast Notifications)
 - Error Boundaries
@@ -211,10 +210,11 @@ Please note that this project is developed **for assignment purposes only** and 
 - Signup page backend integration.
 - Implement Firbase / AWS User authention mechanism.
 - Home screen features
-- Notification manaement with firebase
-- Profile screen implementations
-- Categories tab implementaion
-- Impelement custom animated loading compoennt.
+- Categories screen features
+- Profile screen features
+- Srach functionality
+- Notification with firebase
+- Custom animated loading compoennt.
 - Improve UI/UX for better user experience.
 - Implement full backend validation and security measures.
 - Implement unit testing for all the features
