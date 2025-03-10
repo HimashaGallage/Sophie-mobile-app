@@ -136,8 +136,7 @@ const CheckoutScreen = ({ navigation }: Props) => {
             <Pressable
                 style={[styles.confirmButton, !isFormValid() && styles.confirmButtonDisabled]}
                 onPress={handleConfirmOrder}
-                disabled={!isFormValid()}
-            >
+                disabled={!isFormValid()}>
                 <Text style={styles.confirmButtonText}>{checkout_screen.confirm_order}</Text>
             </Pressable>
             {showAlert && (
@@ -170,13 +169,15 @@ const createStyles = (theme: any) => StyleSheet.create({
     },
     confirmButton: {
         backgroundColor: theme.Colors.primary,
-        padding: 15,
-        borderRadius: 5,
+        paddingVertical: 12,
+        paddingHorizontal: 30, 
+        borderRadius: 30, 
         alignItems: 'center',
         position: 'absolute',
         bottom: 20,
         left: 16,
         right: 16,
+        height: 40, 
     },
     confirmButtonDisabled: {
         backgroundColor: theme.Colors.disabled,
@@ -185,7 +186,7 @@ const createStyles = (theme: any) => StyleSheet.create({
         color: theme.Colors.white,
         fontSize: 14,
         fontWeight: 'bold',
-    },
+    }
 });
 
 export default CheckoutScreen;

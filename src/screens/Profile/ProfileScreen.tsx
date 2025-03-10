@@ -4,8 +4,8 @@ import { useDispatch } from 'react-redux';
 import { useTheme } from '../../context/ThemeContext';
 import { AppDispatch } from '../../redux/store';
 import authThunk from '../../redux/thunks/authThunk';
-import { resetProductsState } from '../../redux/slices/productsSlice';
 import profilePicture from '../../assets/images/portrait.jpg';
+import CustomButton from '../../components/CustomButton';
 
 const dummyUser = {
   name: 'Romina Edwards',
@@ -31,7 +31,6 @@ const ProfileScreen: React.FC = () => {
   };
 
   const onPressLogout = () => {
-    dispatch(resetProductsState());
     dispatch(authThunk.logout());
   };
 
@@ -47,9 +46,7 @@ const ProfileScreen: React.FC = () => {
       <View style={styles.userContent}>
         <Text style={styles.name}>{dummyUser.name}</Text>
         <Text style={styles.email}>{dummyUser.email}</Text>
-        <Pressable style={styles.updateProfileButton} onPress={onPressUpdateProfile}>
-          <Text style={styles.updateProfileButtonText}>Update Profile</Text>
-        </Pressable>
+        <CustomButton title={'Update Profile'} onPress={onPressUpdateProfile} />
         <Pressable style={styles.logoutButton} onPress={onPressLogout}>
           <Text style={styles.logoutButtonText}>Log out</Text>
         </Pressable>
@@ -112,13 +109,19 @@ const createStyles = (theme: any) => StyleSheet.create({
   logoutButton: {
     backgroundColor: theme.Colors.secondary,
     paddingVertical: 10,
-    paddingHorizontal: 20,
-    borderRadius: 5,
-  },
-  logoutButtonText: {
+    paddingHorizontal: 30,
+    borderRadius: 30,
+    marginTop: 10,
+    justifyContent: 'center',
+    alignItems: 'center',
+    height: 40,
+    width: 'auto',
+},
+logoutButtonText: {
     color: theme.Colors.white,
     fontWeight: 'bold',
-  },
+    fontSize: 16,
+},
   settingsHeader: {
     fontSize: 20,
     fontWeight: 'bold',
