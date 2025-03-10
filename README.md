@@ -175,6 +175,7 @@ Here’s a breakdown of the project’s folder structure:
 - Some configurations, such as database connections and API endpoints, may need manual setup.
 - Not fully tested for iOS and Android enviornment due to resource issues.
 - Implement component composition for better readability
+- Java version error in local environment cause android app loading
 
 ### Suggested Improvements
 - Signup page backend integration.
