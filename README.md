@@ -148,22 +148,20 @@ Here’s a breakdown of the project’s folder structure:
 ```
 
 ## Technical implementation
-- Technologies Used
 - TypeScript
 - React
 - React Native
-- React Query
+- React Query, useInfiniteQuery
+- React Navigation
 - Redux Toolkit
 - React Navigation
 - Axios
-- Context API
-- Error Boundaries
+- Context API (share theme across app)
 - JWT (JSON Web Tokens)
 - Keychain (for secure storage)
 - Realm Database
 - Snack Errors (or Toast Notifications)
-- Infinite Scrolling
-- useInfiniteQuery
+- Error Boundaries
 - useMemo
 - FlatList
 
@@ -182,12 +180,11 @@ Here’s a breakdown of the project’s folder structure:
 ## Known Issues and Improvements
 
 ### Known Issues
-- This project is developed **for assignment purposes only** and is **not a fully developed production-ready application**.
-- Certain features may be incomplete or not fully functional.
+Please note that this project is developed **for assignment purposes only** and is **not a fully developed production-ready application**. Certain features may be incomplete or not fully functional.
 - Error handling and validations might be minimal.
 - Some configurations, such as database connections and API endpoints, may need manual setup.
 - Not fully tested for iOS and Android enviornment due to resource issues.
-- Implement component composition for better readability
+- Should implement component composition for better readability.
 - Java version error in local environment cause android app loading
 
 ### Suggested Improvements
@@ -197,6 +194,7 @@ Here’s a breakdown of the project’s folder structure:
 - Notification manaement with firebase
 - Profile screen implementations
 - Categories tab implementaion
+- Impelement custom animated loading compoennt.
 - Improve UI/UX for better user experience.
 - Implement full backend validation and security measures.
 - Implement unit testing for all the features
