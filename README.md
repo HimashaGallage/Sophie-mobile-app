@@ -10,8 +10,8 @@ Sophie Shopping App is a simple e-commerce platform built with React Native and 
 4. Afetr succesful login store user data in **Realm database** and **redux toolkit store** for state management.
  
 - **Shop Screen**
-1. Fetches products from a mock API. Displaying product name, images, price of products.
-2. Supports **infinite scrolling** for easy browsing.
+1. Fetches products from a mock API. use **React query** to fecth and cache data. Displaying product name, images, price of products.
+2. Use **useInfiniteQuery** **useMemo** for easy browsing.
 
 - **Product Details Screen**
 1. Provides detail view of a product with addd to cart
